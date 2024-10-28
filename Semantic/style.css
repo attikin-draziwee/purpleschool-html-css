@@ -1,0 +1,14 @@
+:root {
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #fcfdff;
+}
+
+.bold {
+    font-weight: 700;
+}
