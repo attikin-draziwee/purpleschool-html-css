@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
@@ -38,6 +38,32 @@
                             Интерактивная онлайн-доска для совместной работы
                             команд - в любое время, в любом месте
                         </p>
+                        <form action="/sign" method="post" class="sign">
+                            <input
+                                type="email"
+                                name=""
+                                id=""
+                                class="sign__email"
+                            />
+                            <button type="submit" class="sign__submit">
+                                Начать бесплатно
+                            </button>
+                            <select class="sign__country" required>
+                                <option value="" disabled selected>
+                                    Выберите страну
+                                </option>
+                                <option value="RU">Россия</option>
+                                <option value="USA">США</option>
+                                <option value="UK">Великобритания</option>
+                            </select>
+                            <p class="sign__label">
+                                Нажмите на кнопку "Начать бесплатно" после
+                                выбора страны.
+                            </p>
+                            <p class="sign__label">
+                                Всегда бесплатно - кредитная карта не нужна
+                            </p>
+                        </form>
                     </div>
                     <div class="secondary">
                         <img
