@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Форма контактов</title>
+        <title>Контакты</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/exercise.css" />
     </head>
     <body>
         <main>
             <h1>Свяжитесь со мной</h1>
-            <!-- /contact?email=yongeryk%40gmail.com
-                &telegram=%40attikin_draziwee
-                &topic=course_buy
-                &comment=...
-            -->
             <form action="/contact" method="get">
                 <fieldset>
                     <label for="email">E-mail<sup>*</sup></label>
@@ -27,9 +27,9 @@
                 <fieldset>
                     <label for="telegram">Telegram</label
                     ><input
-                        id="telegram"
                         type="text"
                         name="telegram"
+                        id="telegram"
                         placeholder="@username"
                     />
                 </fieldset>

@@ -4,7 +4,80 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Основы CSS</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <style>
+            /* Стилизация отдельным тегом */
+            label {
+                color: red;
+                text-decoration: underline;
+                background-color: bisque;
+            }
+        </style>
     </head>
-    <body></body>
+    <body>
+        <main>
+            <h1>Свяжитесь со мной</h1>
+            <!-- /contact?email=yongeryk%40gmail.com
+                &telegram=%40attikin_draziwee
+                &topic=course_buy
+                &comment=...
+            -->
+            <form action="/contact" method="get">
+                <fieldset>
+                    <!-- inline стилизация-->
+                    <label
+                        for="email"
+                        style="
+                            color: red;
+                            text-decoration: underline;
+                            background-color: bisque;
+                        "
+                        >E-mail<sup>*</sup></label
+                    >
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="mail@mail.to"
+                        required
+                    />
+                </fieldset>
+                <fieldset>
+                    <label for="telegram">Telegram</label
+                    ><input
+                        type="text"
+                        name="telegram"
+                        placeholder="@username"
+                    />
+                </fieldset>
+                <fieldset>
+                    <label for="topic">Тема<sup>*</sup></label>
+                    <select name="topic" id="topic" required>
+                        <optgroup label="Курс">
+                            <option value="course_buy" selected>
+                                Приобретение курс
+                            </option>
+                            <option value="course_support">
+                                Обратная связь
+                            </option>
+                        </optgroup>
+                        <optgroup label="Сайт">
+                            <option value="site_support">
+                                Поддержка по сайту
+                            </option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="comment">Комментарий</label>
+                    <textarea
+                        name="comment"
+                        id="comment"
+                        placeholder="Введите ваш комментарий"
+                    ></textarea>
+                </fieldset>
+                <button type="submit">Отправить</button>
+            </form>
+        </main>
+    </body>
 </html>

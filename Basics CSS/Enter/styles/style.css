@@ -1,0 +1,18 @@
+body {
+    background-color: #eee;
+}
+/* Стилизация отдельным файлом */
+label {
+    color: red;
+    text-decoration: underline;
+    background-color: bisque;
+}
+
+h1 {
+    color: green;
+}
+
+fieldset {
+    border: none;
+    background-color: bisque;
+}
