@@ -1,18 +1,25 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Формы</title>
     </head>
+
     <body>
         <form class="demo" action="/demo">
+            <input type="hidden" name="locale" value="ru_RU" />
             <label for="demo__email">Введите email</label>
             <input
                 id="demo__email"
                 type="email"
                 placeholder="mail@mail.to"
+                name="email"
                 required
+                title="Необходимо ввести почту"
+                minlength="3"
+                maxlength="214"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             />
             <br />
             <label for="demo__password">Введите пароль </label>
@@ -20,21 +27,94 @@
                 id="demo__password"
                 type="password"
                 placeholder="password"
-                name=""
-                id=""
+                name="password"
+                required
+                title="Необходимо ввести пароль"
             />
             <br />
             <label for="form__birthday">Введите дату рождения</label>
-            <input id="form__birthday" type="date" placeholder="birthday" />
-            <div class="my_class">
-                <p>
-                    Привет, мир! Далеко-далеко за словесными горами в стране
-                    гласных и согласных живут рыбные тексты. Рукопись знаках
-                    повстречался семантика последний. Не свое имени дороге имеет
-                    пунктуация текстов точках, маленький возвращайся деревни наш
-                    осталось проектах грустный.
-                </p>
-            </div>
+            <input
+                id="form__birthday"
+                type="date"
+                placeholder="birthday"
+                name="birthday"
+            />
+            <br />
+            <fieldset>
+                <!-- http://127.0.0.1:8080/demo? без agree -->
+                <!-- http://127.0.0.1:8080/demo?agree=on -->
+                <label for="agree"
+                    >Я соглашаетесь с
+                    <a href="/agree_page.html"
+                        >условиями конфиденциальности</a
+                    ></label
+                >
+                <input type="checkbox" name="agree" id="agree" />
+            </fieldset>
+            <fieldset>
+                <!-- http://127.0.0.1:8080/demo?&is_gay=false -->
+                <label for="">Вы гей?</label>
+                <br />
+                <label for="gay">Да</label>
+                <input
+                    type="radio"
+                    name="is_gay"
+                    id="gay"
+                    value="true"
+                    checked
+                />
+                <br />
+                <label for="not_gay">Нет</label>
+                <input type="radio" name="is_gay" id="not_gay" value="false" />
+            </fieldset>
+            <fieldset>
+                <!-- <label for="topic_id">Тема страницы</label> -->
+                <select name="topic" id="topic_id">
+                    <option value="" disabled selected>
+                        Выберите тему для страницы
+                    </option>
+                    <optgroup label="Темные">
+                        <option value="dark">Темная тема</option>
+                        <option value="dark-blue">Темно-синяя тема</option>
+                    </optgroup>
+                    <hr />
+                    <optgroup label="Светлые">
+                        <option value="light">Светлая тема</option>
+                        <option value="light-pink">Светло-розовая тема</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="volume">Громкость</label>
+                <input
+                    type="range"
+                    name="volume"
+                    id="volume"
+                    step="3"
+                    max="10"
+                    min="1"
+                />
+            </fieldset>
+            <fieldset>
+                <label for="mark">Оценка</label
+                ><input
+                    type="number"
+                    name="mark"
+                    id="mark"
+                    step="1"
+                    max="5"
+                    min="1"
+                />
+            </fieldset>
+
+            <fieldset>
+                <label for="review">Напишите отзыв о нашей организации</label>
+                <br />
+                <textarea name="review" id="review"></textarea>
+            </fieldset>
+            <button type="submit">Отправить</button>
+            <button type="reset">Сбросить</button>
+            <!-- <input type="submit" value="Кнопка 2" /> -->
         </form>
     </body>
 </html>

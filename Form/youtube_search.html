@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Youtube Search</title>
+    </head>
+    <body>
+        <!-- http://127.0.0.1:8080/results?search_query=purpleschool -->
+        <form action="https://youtube.com/results" target="_blank" method="get">
+            <label for="search_query">Введите запрос </label>
+            <input
+                id="search_query"
+                type="text"
+                name="search_query"
+                placeholder="Запрос"
+            />
+            <button type="submit">Найти</button>
+        </form>
+    </body>
+</html>
