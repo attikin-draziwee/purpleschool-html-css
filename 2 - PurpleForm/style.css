@@ -66,6 +66,10 @@ button {
     color: var(--text-color);
 }
 
+/* input[type='email'] {
+    background-color: #fff;
+} */
+
 button {
     border-radius: 0.625em;
     text-align: center;

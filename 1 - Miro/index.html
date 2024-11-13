@@ -1,9 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Miro</title>
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
     </head>
     <body>
         <div class="wrapper">
@@ -39,31 +41,14 @@
                             команд - в любое время, в любом месте
                         </p>
                         <form action="/sign" method="post" class="sign">
-                            <input
-                                type="email"
-                                name=""
-                                id=""
-                                class="sign__email"
-                            />
-                            <button type="submit" class="sign__submit">
+                            <input type="email" name="" id="sign__email" />
+                            <button type="submit" id="sign__submit">
                                 Начать бесплатно
                             </button>
-                            <select class="sign__country" required>
-                                <option value="" disabled selected>
-                                    Выберите страну
-                                </option>
-                                <option value="RU">Россия</option>
-                                <option value="USA">США</option>
-                                <option value="UK">Великобритания</option>
-                            </select>
-                            <p class="sign__label">
-                                Нажмите на кнопку "Начать бесплатно" после
-                                выбора страны.
-                            </p>
-                            <p class="sign__label">
-                                Всегда бесплатно - кредитная карта не нужна
-                            </p>
                         </form>
+                        <p class="sign__label">
+                            Всегда бесплатно - кредитная карта не нужна
+                        </p>
                     </div>
                     <div class="secondary">
                         <img
