@@ -1,6 +1,8 @@
 :root {
     font-size: 18px;
     --color-accent: #4262ff;
+    --darker: #3d318d;
+    --active: #3f2d76;
     --radius: 1.8em;
     --color-text: #050038;
     --container-width: 1120px;
@@ -10,6 +12,10 @@
 
 * {
     box-sizing: border-box;
+    &::selection {
+        background-color: var(--color-accent);
+        color: white;
+    }
 }
 
 .main,
@@ -43,6 +49,19 @@
         display: flex;
         list-style: none;
         gap: 2rem;
+
+        /* & .header__item { */
+        /*     &:first-child { */
+        /*         font-weight: 700; */
+        /*         color: var(--active); */
+        /*     } */
+        /*     &:last-child { */
+        /*         color: gray; */
+        /*     } */
+        /*     &:nth-last-child(1) { */
+        /*         color: green; */
+        /*     } */
+        /* } */
     }
 
     a {
@@ -65,8 +84,16 @@
     }
 }
 
+/* p:not(.main__desc) { */
+/*     color: blue; */
+/* } */
+
 .hero__subheading {
     color: inherit;
+}
+
+.sign input:focus {
+    background-color: #dadada;
 }
 
 #sign__submit {
@@ -80,4 +107,21 @@
 .sign + p {
     font-size: 0.78rem;
     line-height: 143%;
+}
+
+.types {
+    & .types__list {
+        /* list-style: url(../icons/check.svg); */
+        /* & li { */
+        /*     &::marker { */
+        /*         content: url(../icons/check.svg); */
+        /*     } */
+        /* } */
+        list-style: none;
+        & li {
+            &::before {
+                content: url(../icons/check.svg);
+            }
+        }
+    }
 }

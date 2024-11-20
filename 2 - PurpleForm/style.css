@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-boxr;
+    box-sizing: border-box;
 }
 
 :root {
@@ -40,6 +40,9 @@ form {
     gap: 1rem;
     max-width: 697px;
     width: 100%;
+    & fieldset:has(input:invalid) {
+        outline: 2px solid rgb(185, 46, 51);
+    }
 }
 
 fieldset {
