@@ -1,8 +1,10 @@
+/* Settings */
 :root {
     font-size: 18px;
     --color-accent: #4262ff;
     --darker: #3d318d;
     --active: #3f2d76;
+    --inactive: #9b99af;
     --radius: 1.8em;
     --color-text: #050038;
     --container-width: 1120px;
@@ -18,11 +20,32 @@
     }
 }
 
+main {
+    box-sizing: content-box;
+    padding-inline: 2.22em;
+}
+
 .main,
 .header nav {
     max-width: var(--container-width);
     margin: 0 auto;
 }
+
+.primary {
+    .primary__desc {
+        color: #686587;
+    }
+}
+
+.primary__heading {
+    margin-bottom: 1.05rem;
+}
+
+.primary__desc {
+    margin-bottom: 2.17rem;
+}
+
+/* Header */
 
 .link {
     color: var(--color-accent);
@@ -33,9 +56,12 @@
 .header {
     display: block;
     height: 91px;
+    box-sizing: content-box;
     border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 3.3rem;
+    padding-inline: 2.8rem;
 
-    nav {
+    & .nav {
         text-align: center;
         height: 100%;
         display: flex;
@@ -44,24 +70,9 @@
     }
 
     & .header__list {
-        margin: 0;
-        padding: 0;
         display: flex;
         list-style: none;
-        gap: 2rem;
-
-        /* & .header__item { */
-        /*     &:first-child { */
-        /*         font-weight: 700; */
-        /*         color: var(--active); */
-        /*     } */
-        /*     &:last-child { */
-        /*         color: gray; */
-        /*     } */
-        /*     &:nth-last-child(1) { */
-        /*         color: green; */
-        /*     } */
-        /* } */
+        gap: 1.9rem;
     }
 
     a {
@@ -78,22 +89,32 @@
     letter-spacing: 0.05em;
 }
 
-.main {
-    .main__desc {
-        color: #686587;
+/* Hero section */
+
+.hero {
+    margin-bottom: 128px;
+    .hero__heading {
+        margin-bottom: 0.95rem;
+    }
+    .hero__subheading {
+        color: inherit;
+        margin-bottom: 3.1rem;
     }
 }
 
-/* p:not(.main__desc) { */
-/*     color: blue; */
-/* } */
+.sign {
+    margin-bottom: 0.45em;
 
-.hero__subheading {
-    color: inherit;
+    & input:focus {
+        background-color: #dadada;
+    }
 }
 
-.sign input:focus {
-    background-color: #dadada;
+#sign__email {
+    border: 1px solid var(--inactive);
+    border-radius: 1.9rem;
+    height: 2.7rem;
+    padding-inline: 1.6em;
 }
 
 #sign__submit {
@@ -101,7 +122,8 @@
     color: #ffffff;
     border-radius: var(--radius);
     line-height: 150%;
-    padding: 0.6em 0 0.8em;
+    height: 2.7rem;
+    padding: 0.8em 1.6em;
 }
 
 .sign + p {
@@ -109,19 +131,64 @@
     line-height: 143%;
 }
 
+.sign__label {
+    margin-bottom: 2.9rem;
+}
+
+/* Together section */
+
+.together {
+    margin-bottom: 120px;
+}
+
+/* Goal section */
+
+.goal {
+    margin-bottom: 94px;
+}
+
+/* Types section */
+
 .types {
+    margin-bottom: 43px;
+
     & .types__list {
-        /* list-style: url(../icons/check.svg); */
-        /* & li { */
-        /*     &::marker { */
-        /*         content: url(../icons/check.svg); */
-        /*     } */
-        /* } */
+        display: flex;
+        flex-direction: column;
         list-style: none;
+        gap: 1rem;
         & li {
             &::before {
                 content: url(../icons/check.svg);
             }
+        }
+    }
+
+    & .types__heading {
+        margin-bottom: 1.9rem;
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--color-text);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2.2rem;
+    gap: 1.1em;
+    height: 117px;
+    color: white;
+
+    & .footer__list {
+        display: flex;
+        list-style: none;
+        gap: 1.1em;
+
+        & .footer__link {
+            text-decoration: none;
+            color: inherit;
         }
     }
 }
