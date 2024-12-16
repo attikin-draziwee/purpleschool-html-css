@@ -15,49 +15,44 @@
             <h1>Свяжитесь со мной</h1>
             <form action="/contact" method="get">
                 <fieldset>
-                    <label for="email">E-mail<sup>*</sup></label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="mail@mail.to"
-                        required
-                    />
+                    <img src="images/icons/message.svg" alt="Иконка почты">
+                    <div class="form-wrapper">
+                        <label for="email">E-mail<sup>*</sup></label>
+                        <input type="email" name="email" id="email" placeholder="mail@mail.to" required />
+                        </div>
                 </fieldset>
                 <fieldset>
-                    <label for="telegram">Telegram</label
-                    ><input
-                        type="text"
-                        name="telegram"
-                        id="telegram"
-                        placeholder="@username"
-                    />
+                    <img src="images/icons/telegram.svg" alt="Иконка телеграмма">
+                    <div class="form-wrapper">
+                        <label for="telegram">Telegram</label><input type="text" name="telegram" id="telegram" placeholder="@username" />
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <label for="topic">Тема<sup>*</sup></label>
-                    <select name="topic" id="topic" required>
-                        <optgroup label="Курс">
-                            <option value="course_buy" selected>
-                                Приобретение курс
-                            </option>
-                            <option value="course_support">
-                                Обратная связь
-                            </option>
-                        </optgroup>
-                        <optgroup label="Сайт">
-                            <option value="site_support">
-                                Поддержка по сайту
-                            </option>
-                        </optgroup>
-                    </select>
+                    <img src="images/icons/topic.svg" alt="Иконка топика">
+                    <div class="form-wrapper">
+                        <label for="topic">Тема<sup>*</sup></label>
+                        <select name="topic" id="topic" required>
+                            <optgroup label="Курс">
+                                <option value="course_buy" selected>
+                                    Приобретение курс
+                                </option>
+                                <option value="course_support">
+                                    Обратная связь
+                                </option>
+                            </optgroup>
+                            <optgroup label="Сайт">
+                                <option value="site_support">
+                                    Поддержка по сайту
+                                </option>
+                            </optgroup>
+                        </select>
+                    </div>
                 </fieldset>
                 <fieldset>
-                    <label for="comment">Комментарий</label>
-                    <textarea
-                        name="comment"
-                        id="comment"
-                        placeholder="Введите ваш комментарий"
-                    ></textarea>
+                    <div class="form-wrapper">
+                        <label for="comment">Комментарий</label>
+                        <textarea name="comment" id="comment" placeholder="Введите ваш комментарий"></textarea>
+                        </div>
                 </fieldset>
                 <button type="submit">Отправить</button>
             </form>
